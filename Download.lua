@@ -5,14 +5,15 @@ local function fancyWrite(text, nl, c)
 	if c == 1 then
 		local y = y + nl
 		term.setTextColor(colors.orange)
-		term.setCursorPos(math.floor((width - #text) / 2) + 1, y)
-		term.write(text)
+	elseif c == 2 then
+		local y = y + nl
+		term.setTextColor(colors.lime)
 	else
 		local y = y + nl
 		term.setTextColor(colors.white)
-		term.setCursorPos(math.floor((width - #text) / 2) + 1, y)
-		term.write(text)
 	end
+	term.setCursorPos(math.floor((width - #text) / 2) + 1, y)
+	term.write(text)
 end
 
 -- Monster Library
@@ -29,4 +30,5 @@ term.setCursorPos(1, 1)
 fancyWrite("Thank you for downloading...", 0, 0)
 fancyWrite(".-* MONSTER LIBRARY *-.", 1, 1)
 fancyWrite("Please check <dir> for program list.", 1, 0)
-term.setCursorPos(1, 4)
+fancyWrite("Have a great day!", 1, 2)
+term.setCursorPos(1, 5)
