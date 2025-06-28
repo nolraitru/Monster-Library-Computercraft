@@ -1,7 +1,7 @@
 # Monster-Library-Computercraft
 Personal collection of scripts for turtles and computers in the Minecraft mod "ComputerCraft: Tweaked"
-- DuckyDashboard uses Ducky Peripherals as an additional mod.
-- AdvancedDashboard uses Advanced Peripherals as an additional mod.
+- DuckyDashboard uses "Ducky Peripherals by samsthenerd" as an additional mod. (CurseForge)
+- AdvancedDashboard uses "Advanced Peripherals by srrendi" as an additional mod. (CurseForge)
 
 
 
