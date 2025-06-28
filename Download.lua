@@ -39,7 +39,7 @@ elseif pocket then
 	-- Dashboard
 	if version == "Ducky" then
 		shell.run("wget", "https://raw.githubusercontent.com/nolraitru/Monster-Library-Computercraft/refs/heads/main/DuckyDashboard.lua", "DuckyDashboard.lua")
-	elseif version == "Advanced"
+	elseif version == "Advanced" then
 		shell.run("wget", "https://raw.githubusercontent.com/nolraitru/Monster-Library-Computercraft/refs/heads/main/AdvancedDashboard.lua", "AdvancedDashboard.lua")
 	end
 else
@@ -50,7 +50,7 @@ else
 	-- Dashboard
 	if version == "Ducky" then
 		shell.run("wget", "https://raw.githubusercontent.com/nolraitru/Monster-Library-Computercraft/refs/heads/main/DuckyDashboard.lua", "DuckyDashboard.lua")
-	elseif version == "Advanced"
+	elseif version == "Advanced" then
 		shell.run("wget", "https://raw.githubusercontent.com/nolraitru/Monster-Library-Computercraft/refs/heads/main/AdvancedDashboard.lua", "AdvancedDashboard.lua")
 	end
 end
