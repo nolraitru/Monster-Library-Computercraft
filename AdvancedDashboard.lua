@@ -31,7 +31,7 @@ local function isPrecip()
 			weather = "Thunder"
 		elseif environmentDetector.isRaining() and not environmentDetector.isThundering()
 			weather = "Rain"
-		elseif environmentDetector.isSunny()
+		elseif environmentDetector.isSunny() then
 			weather = "Sunshine"
 		else
 			weather = "Snow"
@@ -54,11 +54,11 @@ while true do
 	isPrecip()
 	if weather == "Rain" then
 		MonLibPC.fText("Raining", 8)
-	elseif weather == "Thunder"
+	elseif weather == "Thunder" then
 		MonLibPC.fText("Thunderstorm", 16)
-	elseif weather == "Sunshine"
+	elseif weather == "Sunshine" then
 		MonLibPC.fText("Clear Skies")
-	elseif weather == "Snow"
+	elseif weather == "Snow" then
 		MonLibPC.fText("Snowing")
 	end
 
