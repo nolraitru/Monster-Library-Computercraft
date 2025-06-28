@@ -17,7 +17,7 @@ end
 
 local version = tostring(tArgs[1])
 
-if version == nil then
+if not version == "Ducky" or "Advanced" then
 	fancyWrite("Please append <Ducky> or <Advanced> after command")
 	return false
 end
