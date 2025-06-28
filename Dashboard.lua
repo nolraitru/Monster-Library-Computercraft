@@ -1,3 +1,5 @@
+-- For use with Ducky Peripherals on CurseForge
+
 -- Libraries
 local MonLib = require("MonLib")
 local MonLibPC = require("MonLibPC")
