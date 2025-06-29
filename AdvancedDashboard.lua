@@ -36,6 +36,12 @@ local function isPrecip()
 		weather = "Snow"
 	end
 end
+
+-- Find biome and shorten
+currDimension = environmentDetector.getDimension()
+colonPos = string.find(currDimension,":") + 1
+dimString = string.sub(currDimension,colonPos)
+dimString = string.upper(dimString)
  
 -- Main script
 term.clear()
@@ -73,8 +79,7 @@ while true do
 	MonLibPC.fText(moonPhase)
 	
 	-- Line 5
-	currDimension = environmentDetector.getDimension()
-	MonLibPC.fText(currDimension)
+	MonLibPC.fText(dimString)
  
 	sleep(0.1)
 end
