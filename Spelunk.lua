@@ -139,7 +139,7 @@ for i = 1, dist do
 		end
 	end
 	turtle.placeUp()
-	if (i % 5 == 0) then
+	if (i % 10 == 0) then
 		MonLib.turnAround()
 		while turtle.dig() do
 			sleep(0.66)
