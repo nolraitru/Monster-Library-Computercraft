@@ -30,6 +30,7 @@ function checkWallsT()
 			turtle.place()
 		end
 	turtle.turnRight()
+	end
 end
 
 function moveF(dist)
