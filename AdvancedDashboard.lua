@@ -14,10 +14,10 @@ screenHeight = 0
 sides = { "top", "bottom", "left", "right", "front", "back" }
 
 for periph = 1, #sides do
-	if peripheral.isPresent(sides[periph]) == "monitor" then
+	if peripheral.getType(sides[periph]) == "monitor" then
 		monitor = peripheral.wrap(sides[periph])
 		term.redirect(monitor)
-	elseif peripheral.isPresent(sides[periph]) == "environmentDetector" then
+	elseif peripheral.getType(sides[periph]) == "environmentDetector" then
 		environmentDetector = peripheral.wrap(sides[periph])
 	end
 end
