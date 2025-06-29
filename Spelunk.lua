@@ -135,6 +135,8 @@ for i = 1, dist do
 		while turtle.dig() do
 			sleep(0.66)
 		end
+		turtle.select(torch)
+		turtle.place()
 		MonLib.turnAround()
 	end
 end
