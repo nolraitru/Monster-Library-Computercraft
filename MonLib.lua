@@ -49,5 +49,7 @@ return {
 	tfuel = tfuel,
 	turnAround = turnAround,
 	reset = reset,
-	Error = Error
+	Error = Error,
+	dig = dig,
+	digUp = digUp
 }
