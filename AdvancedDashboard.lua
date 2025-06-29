@@ -26,25 +26,24 @@ weather = nil
  
 -- Check precipitation, type, and thunder
 local function isPrecip()
-	if environmentDetector.isPrecipitating() then
-		if environmentDetector.isThundering() then
-			weather = "Thunder"
-		elseif environmentDetector.isRaining() and not environmentDetector.isThundering()
-			weather = "Rain"
-		elseif environmentDetector.isSunny() then
-			weather = "Sunshine"
-		else
-			weather = "Snow"
-		end
+	if environmentDetector.isThunder() then
+		weather = "Thunder"
+	elseif environmentDetector.isRaining() and not environmentDetector.isThunder()
+		weather = "Rain"
+	elseif environmentDetector.isSunny() then
+		weather = "Sunshine"
+	else
+		weather = "Snow"
 	end
 end
  
 -- Main script
+term.clear()
 while true do
-	term.clear()
 	term.setCursorPos(1, 1)
 
 	-- A 2x2 Monitor Setup allows for 5 displayed lines
+	-- without text scaling
 	-- Line 1
 	local time = os.time()
 	time = textutils.formatTime(time, false)
