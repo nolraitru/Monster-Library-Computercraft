@@ -91,7 +91,7 @@ function makeroom()
 end
 
 -- Main script
-torchNeed = math.ceil(dist / 5)
+torchNeed = math.ceil(dist / 10)
 
 if #tArgs == 0 then
 	MonLib.Error("Invalid syntax. Use [Spelunk <Current Y>].")
