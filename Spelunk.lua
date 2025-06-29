@@ -14,11 +14,11 @@ local ladder2 = 5
 local MonLib = require("MonLib")
 
 function checkWalls()
-    for e = 1, 4 do
-        if turtle.detect() == false then
-        	turtle.select(cobble)
-		turtle.place()
-	end
+	for e = 1, 4 do
+		if turtle.detect() == false then
+			turtle.select(cobble)
+			turtle.place()
+		end
 	turtle.turnRight()
 	end
 end
@@ -31,32 +31,7 @@ function checkWallsT()
 		end
 	turtle.turnRight()
 	end
-end
-
-function moveF(dist)
-	MonLib.tfuel(1, fuel)
-	turtle.forward(dist)
-end
-
-function moveB(dist)
-	MonLib.tfuel(1, fuel)
 	MonLib.turnAround()
-	turtle.forward(dist)
-	MonLib.turnAround()
-end
-
-function moveL(dist)
-	MonLib.tfuel(1, fuel)
-	turtle.turnLeft()
-	turtle.forward(dist)
-	turtle.turnRight()
-end
-
-function moveR(dist)
-	MonLib.tfuel(1, fuel)
-	turtle.turnRight()
-	turtle.forward(dist)
-	turtle.turnLeft()
 end
 
 function makeroom()
