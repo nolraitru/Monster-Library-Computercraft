@@ -15,6 +15,7 @@ local function fancyWrite(text, nl, c)
 	end
 end
 
+local tArgs = { ... }
 local version = tostring(tArgs[1])
 
 if not version == "Ducky" or "Advanced" then
