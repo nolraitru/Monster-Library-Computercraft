@@ -28,7 +28,7 @@ weather = nil
 local function isPrecip()
 	if environmentDetector.isThunder() then
 		weather = "Thunder"
-	elseif environmentDetector.isRaining() and not environmentDetector.isThunder()
+	elseif environmentDetector.isRaining() and not environmentDetector.isThunder() then
 		weather = "Rain"
 	elseif environmentDetector.isSunny() then
 		weather = "Sunshine"
