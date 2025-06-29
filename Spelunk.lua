@@ -124,7 +124,6 @@ for i = 1, dist do
 		turtle.forward()
 		turtle.turnLeft()
 		checkWallsT()
-		turtle.turnLeft()
 		turtle.back()
 		turtle.select(torch)
 		turtle.place()
