@@ -14,11 +14,11 @@ local ladder2 = 5
 local MonLib = require("MonLib")
 
 function checkWalls()
-	for e = 1, 4 do
-		if turtle.detect() == false then
-			turtle.select(cobble)
-			turtle.place()
-		end
+    for e = 1, 4 do
+        if turtle.detect() == false then
+        	turtle.select(cobble)
+		turtle.place()
+	end
 	turtle.turnRight()
 	end
 end
@@ -31,53 +31,42 @@ function checkWallsT()
 		end
 	turtle.turnRight()
 	end
-	MonLib.turnAround()
+ MonLib.turnAround()
 end
 
 function makeroom()
-	MonLib.dig()
-	turtle.forward()
-	MonLib.turnAround()
-	turtle.select(ladder)
-	turtle.place()
-	MonLib.turnAround()
-	MonLib.digUp()
-	turtle.turnLeft()
-	for e = 1, 3 do
-		MonLib.dig()
-		turtle.forward()
-		MonLib.digUp()
-		if e == 2 then
-			turtle.turnLeft()
-			MonLib.dig()
-			turtle.forward()
-			MonLib.digUp()
-			MonLib.turnAround()
-			MonLib.tfuel(1, fuel)
-			turtle.forward()
-			MonLib.dig()
-			turtle.forward()
-			MonLib.digUp()
-			turtle.back()
-			turtle.turnLeft()
-		end
-		turtle.back()
-		turtle.turnRight()
-	end
-	MonLib.turnAround()
-	turtle.forward()
-	turtle.turnLeft()
-	MonLib.dig()
-	turtle.forward()
-	MonLib.digUp()
-	MonLib.turnAround()
-	turtle.forward()
-	MonLib.dig()
-	turtle.forward()
-	MonLib.digUp()
-	MonLib.turnAround()
-	turtle.forward()
-	turtle.turnLeft()
+    MonLib.dig()
+    turtle.forward()
+    MonLib.turnAround()
+    turtle.select(ladder)
+    turtle.place()
+    MonLib.turnAround()
+    MonLib.digUp()
+    turtle.turnLeft()
+    for e = 1, 3 do
+        MonLib.dig()
+        turtle.forward()
+        MonLib.digUp()
+        if e == 2 then
+         turtle.turnLeft()
+         MonLib.dig()
+         turtle.forward()
+         MonLib.digUp()
+         MonLib.turnAround()
+         MonLib.tfuel(1, fuel)
+         turtle.forward()
+         MonLib.dig()
+         turtle.forward()
+         MonLib.digUp()
+         turtle.back()
+         turtle.turnLeft()
+        end
+        turtle.back()
+        turtle.turnRight()
+    end
+    MonLib.turnAround()
+    turtle.forward()
+    MonLib.turnAround()
 end
 
 -- Main script
