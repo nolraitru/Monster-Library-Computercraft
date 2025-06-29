@@ -16,11 +16,20 @@ local MonLib = require("MonLib")
 function checkWalls()
     for e = 1, 4 do
         if turtle.detect() == false then
-            turtle.select(cobble)
+        	turtle.select(cobble)
+		turtle.place()
+	end
+	turtle.turnRight()
+	end
+end
+
+function checkWallsT()
+	for e = 1, 3 do
+		if turtle.detect() == false then
+			turtle.select(cobble)
 			turtle.place()
 		end
-		turtle.turnRight()
-	end
+	turtle.turnRight()
 end
 
 function moveF(dist)
@@ -135,6 +144,12 @@ for i = 1, dist do
 		while turtle.dig() do
 			sleep(0.66)
 		end
+		MonLib.tfuel(1, fuel)
+		turtle.forward()
+		turtle.turnLeft()
+		checkWallsT()
+		turtle.turnLeft()
+		turtle.back()
 		turtle.select(torch)
 		turtle.place()
 		MonLib.turnAround()
